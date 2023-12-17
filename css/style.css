@@ -1,0 +1,104 @@
+/* ^=============>& Global Style */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ~ =============>& Project Style */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #8e7088;
+}
+
+.container {
+  width: 300px;
+  height: 200px;
+  background: linear-gradient(to right, rgb(29, 153, 219), rgb(34, 145, 205));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.container::before {
+  content: '';
+  width: 300px;
+  height: 250px;
+  background: linear-gradient(to right, rgb(45, 155, 214), rgb(60, 168, 227));
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  right: -25%;
+  top: -25%;
+}
+
+.container .content {
+  position: relative;
+  z-index: 2;
+}
+
+.container h2 {
+  color: #fff;
+  margin-top: 10px;
+}
+
+.container p {
+  color: #fff;
+  text-align: right;
+  font-size: 20px;
+  margin: 0;
+  font-family: 'Moon Dance', cursive;
+}
+
+button {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.9px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  margin-top: 20px;
+  background-color: rgba(168, 146, 249, 0.249);
+}
+
+button:hover {
+  background-color: rgb(29, 153, 219);
+  box-shadow: 0px 15px 20px rgba(179, 168, 221, 0.2);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+
+/* & =============> Media */
+@media screen and (width < 576px) {
+  .container {
+    width: 100%;
+    min-height: 280px;
+  }
+}
+
+@media screen and (width >577px) {
+  .container {
+    width: 500px;
+    min-height: 235px;
+  }
+}
